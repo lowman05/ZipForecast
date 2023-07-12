@@ -1,0 +1,61 @@
+﻿@model Weather
+
+<body class="background"></body>
+
+<h2 style="text-align: center">Your Local Weather in @Model.Name</h2>
+<br />
+@if (Model != null && !Model.HasError)
+{
+    <div class="weather">
+        <img src="@Model.IconURL" alt="Weather Icon" class="weather-icon">
+        <br/>
+        <table class="weather-table">
+            <tr>
+                <th>Current Temperature:</th>
+                <td>@Model.Temperature&#176;</td>
+            </tr>
+            
+            <tr>
+                <th>Feels Like:</th>
+                <td>@Model.FeelsLike&#176;</td>
+            </tr>
+            <tr>
+                <th>High:</th>
+                <td>@Model.High&#176;</td>
+            </tr>
+            <tr>
+                <th>Low:</th>
+                <td>@Model.Low&#176;</td>
+            </tr>
+            <tr>
+                <th>Sunrise:</th>
+                <td>@Model.Sunrise</td>
+            </tr>
+            <tr>
+                <th>Sunset:</th>
+                <td>@Model.Sunset</td>
+            </tr>
+        </table>
+
+      
+    </div>
+    <br />
+
+    <div class="zip-field">
+        <form method="get" action="/Weather/Index">
+            <input type="text" name="zip" placeholder="Enter zip code">
+            <button type="submit" class="btn btn-outline-primary custom-btn">Get Weather</button>
+        </form>
+    </div>
+
+ }
+else if (Model != null && Model.HasError)
+{
+    <div class="error-message">
+        <p>@Model.ErrorMessage</p>
+        <form method="get" action="/Weather/Index">
+            <input type="text" name="zip" placeholder="Try Again">
+            <button type="submit" class="btn-outline-primary custom-btn">Get Weather</button>
+        </form>
+    </div>
+}

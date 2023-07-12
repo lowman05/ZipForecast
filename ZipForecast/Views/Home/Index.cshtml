@@ -1,8 +1,19 @@
-﻿@{
+﻿@model string 
+@{
     ViewData["Title"] = "Home Page";
 }
-
+<body class="background"></body>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">ZipForecast</h1>
+    <h3>Just Enter Your Zip Code</h3>
+    
+</div>
+
+<br />
+<br />
+<div class="zip-field">
+<form method="get" action="/Weather/Index">
+    <input type="text" name="zip" placeholder="Enter zip code">
+    <button type="submit" class="btn btn-outline-primary custom-btn">Get Weather</button>
+</form>
 </div>

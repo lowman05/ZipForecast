@@ -20,3 +20,59 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.weather, .zip-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.background{
+    background-color: /*#fcf5c7*/ mintcream;
+}
+input{
+    background-color: /*#ffee93*/ #fcf5c7;
+}
+.custom-btn {
+    background-color: #a0ced9;
+    outline: groove;
+    outline-color: white;
+    color: black;
+    border-radius: 20px;
+    width: 165px;
+
+    
+}
+.custom-btn:hover{
+    background-color: #87b8c4;
+    color: black;
+    
+}
+
+.weather{
+   font-family: Montserrat; 
+   font-weight: 900;
+}
+
+.weather-table {
+    margin-top: 10px;
+    background-color: #fcf5c7;
+    box-shadow: revert;
+    border: groove;
+    border-color: #a0ced9;
+}
+
+    .weather-table th {
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    .weather-table td {
+        text-align: right;
+        padding-bottom: 10px;
+    }
+
+h2{
+   font-family: Montserrat;
+}
