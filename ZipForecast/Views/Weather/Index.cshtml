@@ -4,12 +4,14 @@
 
 <h2 style="text-align: center">Your Local Weather in @Model.Name</h2>
 <br />
+<br/>
 @if (Model != null && !Model.HasError)
 {
     <div class="weather">
-        <img src="@Model.IconURL" alt="Weather Icon" class="weather-icon">
+    <h4>@Model.Description</h4>
+        <img src="@Model.IconURL" alt="Weather Icon" class="weather-icon slide-in">
         <br/>
-        <table class="weather-table">
+        <table class="weather-table slide-in">
             <tr>
                 <th>Current Temperature:</th>
                 <td>@Model.Temperature&#176;</td>

@@ -30,7 +30,8 @@ namespace ZipForecast
 
                 var name = weatherData["name"].ToString();
 
-                var description = weatherData["weather"][0]["description"];
+                //var description = weatherData["weather"][0]["description"];
+                var description = weatherData["weather"][0]["main"];
 
                 var icon = weatherData["weather"][0]["icon"].ToString();
 
@@ -77,7 +78,7 @@ namespace ZipForecast
             {
                 return new Weather
                 {
-                    ErrorMessage = "Invalid Entry: " /*+ ex.Message*/,
+                    ErrorMessage = "Invalid Entry. Please enter a 5 digit U.S. zipcode " /*+ ex.Message*/,
                     HasError = true
                 };
                 

@@ -21,7 +21,7 @@ body {
   margin-bottom: 60px;
 }
 
-.weather, .zip-field {
+.weather, .zip-field, .error-message {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,11 +38,9 @@ input{
     background-color: #a0ced9;
     outline: groove;
     outline-color: white;
-    color: black;
+    color: aliceblue;
     border-radius: 20px;
     width: 165px;
-
-    
 }
 .custom-btn:hover{
     background-color: #87b8c4;
@@ -75,4 +73,27 @@ input{
 
 h2{
    font-family: Montserrat;
+}
+.weather-icon {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-in {
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    10% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.error-message{
+
 }
